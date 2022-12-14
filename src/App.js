@@ -91,7 +91,7 @@ function App() {
   const handleSquareClick = (index) => {
     const isPlayerTurn =
       squares.filter((square) => square !== null).length % 2 === 0;
-    if (isPlayerTurn && winner !== "o") {
+    if (isPlayerTurn && winner !== "o" && squares[index]!=="o") {
       let newSquares = squares;
       newSquares[index] = "x";
       setSquares([...newSquares]);
